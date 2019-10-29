@@ -1,0 +1,31 @@
+Warning (10268): Verilog HDL information at WaveController.v(104): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at WaveController.v(24): object "Ctrl_CLK" differs only in case from object "ctrl_clk" in the same scope
+Info (10281): Verilog HDL Declaration information at WaveController.v(22): object "DAC_Data" differs only in case from object "dac_data" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(8): object "CH1_Data" differs only in case from object "ch1_data" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(9): object "CH2_Data" differs only in case from object "ch2_data" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(10): object "CH3_Data" differs only in case from object "ch3_data" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(11): object "CH4_Data" differs only in case from object "ch4_data" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(14): object "UpdateDone" differs only in case from object "updatedone" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(15): object "DAC_CLK" differs only in case from object "dac_clk" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(16): object "DAC_DIN" differs only in case from object "dac_din" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(17): object "DAC_FS" differs only in case from object "dac_fs" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(18): object "DAC_CS" differs only in case from object "dac_cs" in the same scope
+Info (10281): Verilog HDL Declaration information at TLV5614_CTRL.v(19): object "DAC_LDAC" differs only in case from object "dac_ldac" in the same scope
+Warning (10268): Verilog HDL information at FSMC_CTRL.v(101): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(30): object "Addr" differs only in case from object "addr" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(36): object "CH1_Wave" differs only in case from object "ch1_wave" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(37): object "CH1_Amp" differs only in case from object "ch1_amp" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(38): object "CH1_Freq" differs only in case from object "ch1_freq" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(39): object "CH1_Duty" differs only in case from object "ch1_duty" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(40): object "CH2_Wave" differs only in case from object "ch2_wave" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(41): object "CH2_Amp" differs only in case from object "ch2_amp" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(42): object "CH2_Freq" differs only in case from object "ch2_freq" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(43): object "CH2_Duty" differs only in case from object "ch2_duty" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(44): object "CH3_Wave" differs only in case from object "ch3_wave" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(45): object "CH3_Amp" differs only in case from object "ch3_amp" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(46): object "CH3_Freq" differs only in case from object "ch3_freq" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(47): object "CH3_Duty" differs only in case from object "ch3_duty" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(48): object "CH4_Wave" differs only in case from object "ch4_wave" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(49): object "CH4_Amp" differs only in case from object "ch4_amp" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(50): object "CH4_Freq" differs only in case from object "ch4_freq" in the same scope
+Info (10281): Verilog HDL Declaration information at FSMC_CTRL.v(51): object "CH4_Duty" differs only in case from object "ch4_duty" in the same scope

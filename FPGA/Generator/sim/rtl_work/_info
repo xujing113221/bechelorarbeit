@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/XuJing/Desktop/Generator/sim
+vFSMC_CTRL
+Z1 !s110 1492521631
+!i10b 1
+!s100 bdKdcflifV9T_8;:UUEg>2
+I_iiZMI14VoEVeOf:aHi?R1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1492245852
+8C:/Users/XuJing/Desktop/Generator/src/FSMC_CTRL.v
+FC:/Users/XuJing/Desktop/Generator/src/FSMC_CTRL.v
+L0 1
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1492521631.570000
+!s107 C:/Users/XuJing/Desktop/Generator/src/FSMC_CTRL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XuJing/Desktop/Generator/src|C:/Users/XuJing/Desktop/Generator/src/FSMC_CTRL.v|
+!i113 1
+Z4 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/XuJing/Desktop/Generator/src
+n@f@s@m@c_@c@t@r@l
+vFSMC_CTRL_vlg_tst
+R1
+!i10b 1
+!s100 eb=[gPmFI`kiEC4EO4iP]0
+InP0b;C]mDK97;W5:Ak@K61
+R2
+R0
+w1492244425
+8C:/Users/XuJing/Desktop/Generator/prj/../sim/FSMC_CTRL.vt
+FC:/Users/XuJing/Desktop/Generator/prj/../sim/FSMC_CTRL.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1492521631.890000
+!s107 C:/Users/XuJing/Desktop/Generator/prj/../sim/FSMC_CTRL.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XuJing/Desktop/Generator/prj/../sim|C:/Users/XuJing/Desktop/Generator/prj/../sim/FSMC_CTRL.vt|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+C:/Users/XuJing/Desktop/Generator/prj/../sim
+n@f@s@m@c_@c@t@r@l_vlg_tst
+vFSMC_RAM
+R1
+!i10b 1
+!s100 I]8=iaeo?O1Z;`bUzVWoT3
+I>NhP[E7@^PAOnn<Oo:TNL3
+R2
+R0
+w1492182974
+8C:/Users/XuJing/Desktop/Generator/core/FSMC_RAM.v
+FC:/Users/XuJing/Desktop/Generator/core/FSMC_RAM.v
+Z5 L0 40
+R3
+r1
+!s85 0
+31
+!s108 1492521631.654000
+!s107 C:/Users/XuJing/Desktop/Generator/core/FSMC_RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XuJing/Desktop/Generator/core|C:/Users/XuJing/Desktop/Generator/core/FSMC_RAM.v|
+!i113 1
+R4
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/XuJing/Desktop/Generator/core
+n@f@s@m@c_@r@a@m
+vPLL
+R1
+!i10b 1
+!s100 R0=aT^ZGHjl5BC24mU0K73
+IJ7Qk6ajA4oG`kBYC2SN843
+R2
+R0
+w1492160765
+8C:/Users/XuJing/Desktop/Generator/core/PLL.v
+FC:/Users/XuJing/Desktop/Generator/core/PLL.v
+R5
+R3
+r1
+!s85 0
+31
+!s108 1492521631.724000
+!s107 C:/Users/XuJing/Desktop/Generator/core/PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XuJing/Desktop/Generator/core|C:/Users/XuJing/Desktop/Generator/core/PLL.v|
+!i113 1
+R4
+R6
+n@p@l@l
+vPLL_altpll
+R1
+!i10b 1
+!s100 L:B3CN>IFk`?lmYl@hb?c2
+I3LLmPj?0?EBz9Wb@kCS9M0
+R2
+R0
+w1492168909
+8C:/Users/XuJing/Desktop/Generator/prj/db/pll_altpll.v
+FC:/Users/XuJing/Desktop/Generator/prj/db/pll_altpll.v
+L0 30
+R3
+r1
+!s85 0
+31
+!s108 1492521631.813000
+!s107 C:/Users/XuJing/Desktop/Generator/prj/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XuJing/Desktop/Generator/prj/db|C:/Users/XuJing/Desktop/Generator/prj/db/pll_altpll.v|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+C:/Users/XuJing/Desktop/Generator/prj/db
+n@p@l@l_altpll

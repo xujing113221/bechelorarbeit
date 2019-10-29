@@ -1,0 +1,172 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus II License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/13/2017 22:44:35"
+                                                                                
+// Verilog Test Bench template for design : TLV5614_CTRL
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module TLV5614_CTRL_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg[15:0] CH1_Data;
+reg CH1_TrSgn;
+reg[15:0] CH2_Data;
+reg CH2_TrSgn;
+reg[15:0] CH3_Data;
+reg CH3_TrSgn;
+reg[15:0] CH4_Data;
+reg CH4_TrSgn;
+reg CLK;
+reg RST_n;
+// wires                                               
+wire DAC_CLK;
+wire DAC_CS;
+wire DAC_DIN;
+wire DAC_FS;
+wire DAC_LDAC;
+wire DAC_PD;
+wire UpdateDone;
+wire [15:0]  test_data;
+
+// assign statements (if any)                          
+TLV5614_CTRL i1 (
+// port map - connection between master ports and signals/registers   
+	.CH1_Data(CH1_Data),
+	.CH1_TrSgn(CH1_TrSgn),
+	.CH2_Data(CH2_Data),
+	.CH2_TrSgn(CH2_TrSgn),
+	.CH3_Data(CH3_Data),
+	.CH3_TrSgn(CH3_TrSgn),
+	.CH4_Data(CH4_Data),
+	.CH4_TrSgn(CH4_TrSgn),
+	.CLK(CLK),
+	.DAC_CLK(DAC_CLK),
+	.DAC_CS(DAC_CS),
+	.DAC_DIN(DAC_DIN),
+	.DAC_FS(DAC_FS),
+	.DAC_LDAC(DAC_LDAC),
+	.DAC_PD(DAC_PD),
+	.RST_n(RST_n),
+	.UpdateDone(UpdateDone),
+	.test_data(test_data)
+);
+
+
+
+	initial begin                                                  
+		CLK = 0;  
+		forever #20 CLK = ~CLK;		// 25MHz											                         
+		end  
+
+	initial begin
+		RST_n = 0;
+		#100;
+		RST_n = 1;
+		end 
+	
+	reg CLK_1KHz;
+	initial begin
+		CLK_1KHz = 0;
+		forever #500000 CLK_1KHz = ~CLK_1KHz;
+		end
+	
+	always@(posedge CLK_1KHz or RST_n) 
+		if(!RST_n)begin
+			CH1_TrSgn <= 1'b0;
+			CH2_TrSgn <= 1'b0;
+			CH3_TrSgn <= 1'b0;
+			CH4_TrSgn <= 1'b0;
+			end
+		else begin
+			CH1_TrSgn <= 1;
+			CH2_TrSgn <= 1;
+			CH3_TrSgn <= 1;
+			CH4_TrSgn <= 1;
+			#100 CH1_TrSgn <= 0;
+			#100 CH2_TrSgn <= 0;
+			#100 CH3_TrSgn <= 0;
+			#100 CH4_TrSgn <= 0;
+			end
+
+	
+	always@(posedge CLK_1KHz or negedge RST_n)
+		if(!RST_n)
+			CH1_Data = {4'b0000,12'b0000};
+		else if(CH1_Data[11:0] == 4000)
+			CH1_Data[11:0] = 12'b0;
+		else
+			CH1_Data[11:00] = CH1_Data[11:00] + 1;
+		
+	always@(posedge CLK_1KHz or negedge RST_n)
+		if(!RST_n)
+			CH2_Data = {4'b0000,12'b0000};
+		else if(CH2_Data[11:0] == 4000)
+			CH2_Data[11:0] = 12'b0;
+		else
+			CH2_Data[11:00] = CH2_Data[11:00] + 5;	
+
+	always@(posedge CLK_1KHz or negedge RST_n)
+		if(!RST_n)
+			CH3_Data = {4'b0000,12'b0000};
+		else if(CH1_Data[11:0] == 4000)
+			CH3_Data[11:0] = 12'b0;
+		else
+			CH3_Data[11:00] = CH3_Data[11:00] + 98;
+	
+	initial CH4_Data = 16'hffff;
+			
+//	always@(posedge CLK_1KHz or negedge RST_n)
+//		if(!RST_n)
+//			CH4_Data = {4'b0000,12'b0000};
+//		else if(CH4_Data[11:0] == 4000)
+//			CH4_Data[11:0] = 12'b0;
+//		else
+//			CH4_Data[11:00] = CH4_Data[11:00] + 11;
+			
+	
+	
+/****************************************************************************/
+
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

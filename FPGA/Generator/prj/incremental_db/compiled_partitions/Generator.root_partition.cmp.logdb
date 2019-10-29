@@ -1,0 +1,13 @@
+v1
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch3_ctrl|lpm_mult:Mult1|mult_mbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch3_ctrl|lpm_mult:Mult0|mult_mbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch4_ctrl|lpm_mult:Mult1|mult_mbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch4_ctrl|lpm_mult:Mult0|mult_mbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch2_ctrl|lpm_mult:Mult1|mult_mbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch2_ctrl|lpm_mult:Mult0|mult_mbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch1_ctrl|lpm_mult:Mult1|mult_mbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch1_ctrl|lpm_mult:Mult0|mult_mbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch3_ctrl|lpm_mult:Mult2|mult_kbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch4_ctrl|lpm_mult:Mult2|mult_kbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch2_ctrl|lpm_mult:Mult2|mult_kbt:auto_generated|mac_mult3,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,WaveController:ch1_ctrl|lpm_mult:Mult2|mult_kbt:auto_generated|mac_mult3,

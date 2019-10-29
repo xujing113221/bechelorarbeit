@@ -1,0 +1,59 @@
+module GeneraterTop(clk,
+						rst,
+						dac_clk,
+						dac_din,
+						dac_fs,
+						dac_cs,
+						dac_ldac,
+						dac_pd,
+						key
+						);
+input clk;
+input rst;
+input key;
+output dac_clk;
+output dac_din;
+output dac_fs;
+output dac_cs;
+output dac_ldac;
+output dac_pd;
+wire updateRep;
+wire updatedone;
+wire [3:0]rom_addr;
+wire [3:0]rom_data;
+wire [15:0] DAC_Data;
+
+TLV5614_CTRL dac(
+			.clk(clk),
+			.rst(rst),
+			.updateRep(updateRep),
+			.ctrlword(DAC_Data),
+			
+			.updatedone(updatedone),
+			.dac_clk(dac_clk),
+			.dac_din(dac_din),
+			.dac_fs(dac_fs),
+			.dac_cs(dac_cs),
+			.dac_ldac(dac_ldac),
+			.dac_pd(dac_pd)
+			);
+rom rom(
+	.address(rom_addr),
+	.clock(clk),
+	.q(rom_data));
+
+WaveController ch1_ctrl(
+		.Clk(clk),
+		.Rst_n(rst),
+		.Chn(2'b0),			//channal 1
+		.Waveform(8'd1),	//sine wave
+		.AmpX10(8'd100),	//voltage 10.0V
+		.Freq(8'd10),		//Freq 10Hz
+		.Duty(8'd50),			//Duty 50%
+		.BusySgn(updatedone),
+		.CH_Data(DAC_Data),
+		.TriggerSign(updateRep)
+		);
+
+	
+endmodule

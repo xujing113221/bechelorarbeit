@@ -1,0 +1,109 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus II License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/15/2017 16:09:24"
+                                                                                
+// Verilog Test Bench template for design : GeneraterTop
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module GeneraterTop_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [7:0] Addr;
+reg CLK;
+reg CS_n;
+reg [15:0] treg_DataByte;
+reg RD_n;
+reg WR_n;
+// wires                                               
+wire [15:0]  CH1_Data;
+wire CH1_TrSgn;
+wire [15:0]  CH2_Data;
+wire CH2_TrSgn;
+wire [15:0]  CH3_Data;
+wire CH3_TrSgn;
+wire [15:0]  CH4_Data;
+wire CH4_TrSgn;
+wire DAC_CLK;
+wire DAC_CS;
+wire DAC_DIN;
+wire DAC_FS;
+wire DAC_LDAC;
+wire DAC_PD;
+wire [15:0]  DataByte;
+
+// assign statements (if any)                          
+assign DataByte = treg_DataByte;
+GeneraterTop i1 (
+// port map - connection between master ports and signals/registers   
+	.Addr(Addr),
+	.CH1_Data(CH1_Data),
+	.CH1_TrSgn(CH1_TrSgn),
+	.CH2_Data(CH2_Data),
+	.CH2_TrSgn(CH2_TrSgn),
+	.CH3_Data(CH3_Data),
+	.CH3_TrSgn(CH3_TrSgn),
+	.CH4_Data(CH4_Data),
+	.CH4_TrSgn(CH4_TrSgn),
+	.CLK(CLK),
+	.CS_n(CS_n),
+	.DAC_CLK(DAC_CLK),
+	.DAC_CS(DAC_CS),
+	.DAC_DIN(DAC_DIN),
+	.DAC_FS(DAC_FS),
+	.DAC_LDAC(DAC_LDAC),
+	.DAC_PD(DAC_PD),
+	.DataByte(DataByte),
+	.RD_n(RD_n),
+	.WR_n(WR_n)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+  CLK = 0;  
+	forever #20 CLK = ~CLK;		// 25MHz		    
+	
+	Addr = 8'b0;
+	DataByte = 16'hzzzz;
+	WR_n = 1;
+	RD_n = 1;
+	CS_n = 1;
+	
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

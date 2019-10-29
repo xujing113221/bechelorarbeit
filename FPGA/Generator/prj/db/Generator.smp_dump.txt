@@ -1,0 +1,7 @@
+
+State Machine - |GeneraterTop|TLV5614_CTRL:dac|chn
+Name chn.11 chn.10 chn.01 chn.00 
+chn.00 0 0 0 0 
+chn.01 0 0 1 1 
+chn.10 0 1 0 1 
+chn.11 1 0 0 1 

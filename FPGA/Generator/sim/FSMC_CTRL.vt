@@ -1,0 +1,124 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus II License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/15/2017 16:19:23"
+                                                                                
+// Verilog Test Bench template for design : FSMC_CTRL
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module FSMC_CTRL_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [7:0] Addr;
+reg CLK;
+reg CS_n;
+reg [15:0] treg_DataByte;
+reg RD_n;
+reg RST_n;
+reg WR_n;
+// wires                                               
+wire [7:0]  CH1_Amp;
+wire [7:0]  CH1_Duty;
+wire [7:0]  CH1_Freq;
+wire [7:0]  CH1_Wave;
+wire [7:0]  CH2_Amp;
+wire [7:0]  CH2_Duty;
+wire [7:0]  CH2_Freq;
+wire [7:0]  CH2_Wave;
+wire [7:0]  CH3_Amp;
+wire [7:0]  CH3_Duty;
+wire [7:0]  CH3_Freq;
+wire [7:0]  CH3_Wave;
+wire [7:0]  CH4_Amp;
+wire [7:0]  CH4_Duty;
+wire [7:0]  CH4_Freq;
+wire [7:0]  CH4_Wave;
+wire [15:0]  DataByte;
+
+// assign statements (if any)                          
+assign DataByte = treg_DataByte;
+FSMC_CTRL i1 (
+// port map - connection between master ports and signals/registers   
+	.Addr(Addr),
+	.CH1_Amp(CH1_Amp),
+	.CH1_Duty(CH1_Duty),
+	.CH1_Freq(CH1_Freq),
+	.CH1_Wave(CH1_Wave),
+	.CH2_Amp(CH2_Amp),
+	.CH2_Duty(CH2_Duty),
+	.CH2_Freq(CH2_Freq),
+	.CH2_Wave(CH2_Wave),
+	.CH3_Amp(CH3_Amp),
+	.CH3_Duty(CH3_Duty),
+	.CH3_Freq(CH3_Freq),
+	.CH3_Wave(CH3_Wave),
+	.CH4_Amp(CH4_Amp),
+	.CH4_Duty(CH4_Duty),
+	.CH4_Freq(CH4_Freq),
+	.CH4_Wave(CH4_Wave),
+	.CLK(CLK),
+	.CS_n(CS_n),
+	.DataByte(DataByte),
+	.RD_n(RD_n),
+	.RST_n(RST_n),
+	.WR_n(WR_n)
+);
+
+initial begin                                                  
+	CLK = 0;  
+	forever #20 CLK = ~CLK;		// 25MHz											                         
+	end  
+
+initial begin
+	RST_n = 0;
+	#100;
+	RST_n = 1;
+	end 
+	
+
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+   Addr = 8'b0;
+	treg_DataByte = 16'b0;
+	WR_n = 1;
+	RD_n = 1;
+	CS_n = 1;                                                  
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

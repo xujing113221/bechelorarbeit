@@ -1,0 +1,171 @@
+module TLV5614_CTRL(
+			clk,
+			rst,
+			updateRep,
+			ctrlword,
+			
+			updatedone,
+			dac_clk,
+			dac_din,
+			dac_fs,
+			dac_cs,
+			dac_ldac,
+			dac_pd
+			);
+        input clk;
+		  input	rst;
+		  input updateRep;
+		  input [15:0] ctrlword;
+		  output reg updatedone;
+		  output reg dac_clk;
+		  output reg dac_din;
+		  output reg dac_fs;
+		  output reg dac_cs;
+		  output reg dac_ldac;
+		  output wire dac_pd;
+	
+		assign	dac_pd=1'b1;
+			//assign	dac_ldac=1'b0;
+	
+		  reg[9:0] cnt;
+		  always@(posedge clk or negedge rst)
+		  if(!rst)
+			cnt<=9'd0;
+		  else if(updateRep==1 | (cnt!=9'd0))begin
+			if(cnt==9'd39)
+				cnt<=0;
+			else cnt<=cnt+1'b1;
+		  end
+		  else 
+			cnt<=9'd0;
+		    
+		  always@(posedge clk or negedge rst)
+		  if(!rst)begin
+			dac_clk<=1'b0;
+			dac_din<=1'b0;
+			dac_fs<=1'b1;
+			dac_cs<=1'b1;
+			updatedone<=1'b0;
+			dac_ldac<=1'b1;
+		  end
+		  else begin
+		  case(cnt)
+			0:begin
+				dac_clk<=1'b0;
+				dac_din<=1'b0;
+				dac_fs<=1'b1;
+				updatedone<=1'b0;
+				dac_ldac<=1'b1;
+			  end
+			1:begin
+				dac_cs<=1'b0;
+				dac_ldac<=1'b0;
+				end
+			2:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[15];
+				dac_fs<=1'b0;
+				dac_cs<=1'b0;
+			  end
+			3:dac_clk<=1'b0;
+			4:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[14];
+			  end
+			5:dac_clk<=1'b0;
+			6:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[13];
+			  end
+			7:dac_clk<=1'b0;
+			8:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[12];
+			  end
+			9:dac_clk<=1'b0;
+			10:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[11];
+			  end
+			11:dac_clk<=1'b0;
+			12:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[10];
+			  end
+			13:dac_clk<=1'b0;
+			14:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[9];
+			  end
+			15:dac_clk<=1'b0;
+			16:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[8];
+			  end
+			17:dac_clk<=1'b0;
+			18:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[7];
+			  end
+			19:dac_clk<=1'b0;
+			20:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[6];
+			  end
+			21:dac_clk<=1'b0;
+			22:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[5];
+			  end
+			23:dac_clk<=1'b0;
+			24:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[4];
+			  end
+			25:dac_clk<=1'b0;
+			26:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[3];
+			  end
+			27:dac_clk<=1'b0;
+			28:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[2];
+			  end
+			29:dac_clk<=1'b0;
+			30:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[1];
+			  end
+			31:dac_clk<=1'b0;
+			32:begin
+				dac_clk<=1'b1;
+				dac_din<=ctrlword[0];
+			  end
+			33:dac_clk<=1'b0;	
+			34:begin
+			dac_clk<=1'b1;
+			dac_din<=1'b0;
+			end
+			35:begin
+			dac_clk<=1'b0;
+			end
+			36:begin
+				dac_clk<=1'b1;
+				dac_ldac<=1'b1;
+			end
+			37:begin
+			dac_clk<=1'b0;
+			dac_fs<=1'b1;
+			end
+			38:begin
+			dac_cs<=1'b1;
+			dac_clk<=1'b0;
+			end
+			39:begin
+			updatedone<=1'b1;
+			end
+			default:;
+			endcase
+		  end
+endmodule

@@ -1,0 +1,104 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Generator_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/XuJing/Desktop/Generator/src {C:/Users/XuJing/Desktop/Generator/src/FSMC_CTRL.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:20:31 on Apr 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/XuJing/Desktop/Generator/src" C:/Users/XuJing/Desktop/Generator/src/FSMC_CTRL.v 
+# -- Compiling module FSMC_CTRL
+# 
+# Top level modules:
+# 	FSMC_CTRL
+# End time: 21:20:31 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/XuJing/Desktop/Generator/core {C:/Users/XuJing/Desktop/Generator/core/FSMC_RAM.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:20:31 on Apr 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/XuJing/Desktop/Generator/core" C:/Users/XuJing/Desktop/Generator/core/FSMC_RAM.v 
+# -- Compiling module FSMC_RAM
+# 
+# Top level modules:
+# 	FSMC_RAM
+# End time: 21:20:31 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/XuJing/Desktop/Generator/core {C:/Users/XuJing/Desktop/Generator/core/PLL.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:20:31 on Apr 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/XuJing/Desktop/Generator/core" C:/Users/XuJing/Desktop/Generator/core/PLL.v 
+# -- Compiling module PLL
+# 
+# Top level modules:
+# 	PLL
+# End time: 21:20:31 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/XuJing/Desktop/Generator/prj/db {C:/Users/XuJing/Desktop/Generator/prj/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:20:31 on Apr 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/XuJing/Desktop/Generator/prj/db" C:/Users/XuJing/Desktop/Generator/prj/db/pll_altpll.v 
+# -- Compiling module PLL_altpll
+# 
+# Top level modules:
+# 	PLL_altpll
+# End time: 21:20:31 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/XuJing/Desktop/Generator/prj/../sim {C:/Users/XuJing/Desktop/Generator/prj/../sim/FSMC_CTRL.vt}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:20:31 on Apr 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/XuJing/Desktop/Generator/prj/../sim" C:/Users/XuJing/Desktop/Generator/prj/../sim/FSMC_CTRL.vt 
+# -- Compiling module FSMC_CTRL_vlg_tst
+# 
+# Top level modules:
+# 	FSMC_CTRL_vlg_tst
+# End time: 21:20:31 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  FSMC_CTRL_vlg_tst
+# vsim -gui "+altera" -l msim_transcript -do "Generator_run_msim_rtl_verilog.do" 
+# Start time: 21:20:32 on Apr 18,2017
+# Loading work.FSMC_CTRL_vlg_tst
+# Loading work.FSMC_CTRL
+# Loading work.PLL
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.FSMC_RAM
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: XuJing  Hostname: XUJING-THINKPAD  ProcessID: 13584
+# 
+#           Attempting to use alternate WLF file "./wlftbezw19".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftbezw19
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Running testbench
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 180000  Instance: FSMC_CTRL_vlg_tst.i1.pll.altpll_component.cycloneiii_pll.pll3
+# End time: 21:39:06 on Apr 18,2017, Elapsed time: 0:18:34
+# Errors: 0, Warnings: 2
